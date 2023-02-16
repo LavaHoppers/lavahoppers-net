@@ -1,8 +1,0 @@
-{
-  "name": "lavahoppers-net",
-  "version": "0.0.1",
-  "description": "The code for lavahoppers.net",
-  "main": "src/index.js",
-  "author": "Joshua Hopwood",
-  "license": "MIT"
-}

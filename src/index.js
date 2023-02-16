@@ -2,6 +2,11 @@
 import { createServer } from 'http';
 import { promises as fs } from 'fs';
 
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './styles.css';
+
+
 const port = 80;
 
 const requestListener = (req, res) => {
