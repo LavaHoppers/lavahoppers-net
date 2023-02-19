@@ -1,22 +1,53 @@
+/* The navigation bar at the top */
 .list {
-    list-style-type: none;
+    position: fixed;
     margin: 0;
-    padding: 0;
+    width: 100%;
+    background-color: none;
+    list-style-type: none;
+    padding: 5pt;
+    backdrop-filter: blur(8px)
 }
 
-.list li {
+/* Each navigation button shoud be inline */
+.list > li {
     display: inline;
 }
 
-
-.link {
+/* navigation button defaults */
+.list > li a, .list > li div {
+    color:#ddd;
     text-align: center;
-    display: block;
-    width: 80px;
+    text-decoration: none;
+    font-size: 18pt;
+    display: inline-block;
+    width: 125px;
+    transition: 100ms;
+    border-radius: 2px;
 }
 
-.link:hover {
-    background-color: #555;
-    color: white;
-    font-style: bold;
+/*when nav button is the on currently depressed*/
+.list > li div {
+    color: #555;
+    transition: 300ms;
 }
+
+/* hover a nav button */
+.list > li a:hover {
+    background-color: #ddd;
+    color: #333;
+    transition: 200ms;
+}
+
+/* cliking a nav button
+.list > li a:active {
+    background-color: #111;
+    color: #555;
+    transition: 200ms;
+}
+
+.list > li img {
+    width: 32px;
+    float: right;
+    margin-right: 5px;
+} */
