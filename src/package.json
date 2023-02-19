@@ -3,22 +3,22 @@
   "name": "lavahoppers-net",
   "version": "0.0.1",
   "description": "The code for lavahoppers.net",
-  "main": "src/index.js",
+  "main": "src/pages/index.js",
   "author": "Joshua Hopwood",
   "license": "MIT",
   "dependencies": {
+    "next": "^13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/LavaHoppers/lavahoppers-net.git"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  },
-  "nodemonConfig": {}
+  }
 }
