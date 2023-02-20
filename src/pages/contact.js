@@ -3,6 +3,6 @@ import { Default } from "../lib/layout"
 
 export default () => {
   return <Default 
-          title={"lavahoppers.net"}
+          title={"Contact"}
           content={"Test"} />
 }
