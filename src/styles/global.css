@@ -4,6 +4,10 @@ html, body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #ddd;
+  letter-spacing: 1px;
+  line-height: 18pt;
+  font-size: 10pt;
+  width: 100vw;
 }
 
 h1 {
@@ -15,34 +19,71 @@ h1 {
 }
 
 .content {
-  background-color: #333;
-  margin: auto;
-  width: 70%;
-  max-width: 800px;
-  min-width: 500px;
+  grid-column: 3 / 3;
+  /*background-color: #333;*/
+  margin-bottom: 500px;
+
+  width: 750px;
   padding: 15px;
   border-radius: 5px;
-  letter-spacing: 1px;
-  font-size: 11pt;
 }
 
-textarea {
-  background: url(http://i.imgur.com/2cOaJ.png);
-  background-attachment: local;
-  background-repeat: no-repeat;
-  padding-left: 35px;
-  padding-top: 10px;
-  border-color:#ccc;
+
+/**
+ * Prevent line numbers in code blocks from being selected
+ */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
-.search-in {
-  width: 90%;
-  margin-left: 5%;
-  padding: 6px 10px;
-  box-sizing: border-box;
-  border: 1px solid #ddd;
-  border-radius: 2px;
-  background-color: #ddd;
-  font-size: 16px;
-  resize: none;
+/*https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp*/
+.sidenav {
+  grid-column: 2 / 2;
+  grid-row: 1/1;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  align-self: start;
+  background-color: #333; /* Black */
+  padding: 10px;
+  border-radius: 5px;
+  top: 48px;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: auto 250px 750px auto;
+  grid-gap: 10px;
+}
+
+
+@media screen and (max-width: 1050px) {
+  .sidenav  {
+    display: none;
+  }
+  .content {
+    margin: auto;
+  }
+  .container {
+    display: block;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .content {
+    width: 85%;
+  }
+  
+}
+
+
+
+

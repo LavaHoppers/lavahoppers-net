@@ -1,3 +1,6 @@
 src/node_modules
 src/package-lock.json
 src/.next
+.DS_store
+src/.DS_store
+package-lock.json

@@ -6,7 +6,8 @@
     background-color: none;
     list-style-type: none;
     padding: 5pt;
-    backdrop-filter: blur(8px)
+    backdrop-filter: blur(8px);
+    z-index: 1;
 }
 
 /* Each navigation button shoud be inline */
@@ -17,11 +18,14 @@
 /* navigation button defaults */
 .list > li a, .list > li div {
     color:#ddd;
-    text-align: center;
+    text-align:center;
+    line-height: 36px;
     text-decoration: none;
     font-size: 18pt;
     display: inline-block;
     width: 125px;
+    height: 36px;
+
     transition: 100ms;
     border-radius: 2px;
 }

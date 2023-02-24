@@ -1,8 +1,6 @@
-import { Default } from "../lib/layout"
+import { Default } from "../lib/page-layouts"
 
 
 export default () => {
-  return <Default 
-          title={"lavahoppers.net"}
-          content={"Test"} />
+  return <Default title={"lavahoppers.net"} content={"Test"} />
 }
